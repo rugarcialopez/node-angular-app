@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="caloriesapp">
+
+<head>
+  <title>Calories Tracker</title>
+
+  <!-- <base href="/"> -->
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/ng-notifications-bar/dist/ngNotificationsBar.min.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/ng-notifications-bar/dist/ngNotificationsBar.min.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+
+
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <script type="text/javascript" src="js/factories/authenticationfactory.js"></script>
+  <script type="text/javascript" src="js/factories/tokeninterceptor.js"></script>
+  <script type="text/javascript" src="js/factories/userauthenticationfactory.js"></script>
+  <script type="text/javascript" src="js/services/meals.js"></script>
+  <script type="text/javascript" src="js/services/user.js"></script>
+  <script type="text/javascript" src="js/controllers/login.js"></script>
+  <script type="text/javascript" src="js/controllers/meals.js"></script>
+  <script type="text/javascript" src="js/controllers/header.js"></script>
+  <script type="text/javascript" src="js/controllers/user.js"></script>
+  <script type="text/javascript" src="js/controllers/header.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+  <div ng-include="'partials/header.html'"></div>
+  <notifications-bar class="notifications"></notifications-bar>
+  <div class="container" ng-view></div>
+  </div>
+
+
+</body>
+
+</html>

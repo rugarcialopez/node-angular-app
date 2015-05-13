@@ -1,0 +1,4 @@
+{ "username" : "garcia2@hotmail.com",
+  "password" : "ruben",
+  "expectedCalories": 89
+}

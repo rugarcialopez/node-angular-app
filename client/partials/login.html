@@ -1,0 +1,106 @@
+<div class="row">
+  <div ng-show="showLogin" class="col-md-4 col-md-offset-4">
+    <div class="login-panel panel panel-default">
+      <div class="panel-heading">
+          <h3 class="panel-title">Please Sign in</h3>
+      </div>
+      <div class="panel-body">
+        <form name="loginForm" novalidate class="css-form">
+          <fieldset>
+
+            <div class="form-group"
+              ng-class="{'has-error': loginForm.username.$invalid && !userForm.username.$pristine}">
+              <input class="form-control" name="username" type="email"
+                placeholder="Username" required ng-model="username" />
+              <span class="help-block"
+                ng-show="loginForm.username.$error.required">Required</span>
+              <span class="help-block"
+                ng-show="loginForm.username.$invalid && !loginForm.username.$pristine">Enter a valid email.</span>
+            </div>
+
+
+            <div class="form-group"
+              ng-class="{'has-error': loginForm.password.$invalid && !userForm.username.$pristine}">
+              <input class="form-control" name="password" type="password"
+                placeholder="Password" required ng-model="password"
+                ng-minlength="3" />
+              <span class="help-block"
+                ng-show="loginForm.password.$error.required">Required</span>
+              <span class="help-block"
+                ng-show="userForm.password.$error.minlength">Password is too short.</span>
+            </div>
+
+            <a ng-click="showLogin = !showLogin">Not a member? Join now</a>
+
+            <button type="submit" ng-click="login()"
+                class="btn btn-lg btn-success btn-block"
+                ng-disabled="loginForm.$invalid">
+              Sign in
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="!showLogin" class="col-md-4 col-md-offset-4">
+    <div class="login-panel panel panel-default">
+      <div class="panel-heading">
+          <h3 class="panel-title">Please Sign Up</h3>
+      </div>
+      <div class="panel-body">
+        <form name="signUpForm" novalidate class="css-form">
+          <fieldset>
+
+            <div class="form-group"
+            ng-class="{'has-error': signUpForm.username.$invalid}">
+              <input class="form-control" name="username" type="email"
+                placeholder="Username" required ng-model="username" />
+              <span class="help-block"
+                ng-show="signUpForm.username.$error.required">Required</span>
+              <span class="help-block"
+                ng-show="signUpForm.username.$invalid && !signUpForm.username.$pristine">Enter a valid email.</span>
+            </div>
+
+
+            <div class="form-group"
+              ng-class="{'has-error': signUpForm.password.$invalid}">
+              <input class="form-control" name="password" type="password"
+                placeholder="Repeat Password" required ng-model="password"
+                ng-minlength="3" ng-maxlength="8" />
+              <span class="help-block"
+                ng-show="signUpForm.password.$error.required">Required</span>
+              <span class="help-block"
+                ng-show="signUpForm.password.$error.minlength">Password is too short.</span>
+              <span class="help-block"
+                ng-show="signUpForm.password.$error.maxlength">Password is too long.</span>
+            </div>
+
+            <div class="form-group"
+              ng-class="{'has-error': signUpForm.securepassword.$invalid}">
+              <input class="form-control" name="securepassword" type="password"
+                placeholder="Repeat Password" required ng-model="securepassword"
+                ng-minlength="3" ng-maxlength="8" />
+              <span class="help-block"
+                ng-show="signUpForm.securepassword.$error.required">Required</span>
+              <span class="help-block"
+                ng-show="signUpForm.securepassword.$error.minlength">Password is too short.</span>
+              <span class="help-block"
+                ng-show="signUpForm.securepassword.$error.maxlength">Password is too long.</span>
+            </div>
+
+            <a ng-click="showLogin = !showLogin">Already have an account? Sign in</a>
+
+            <button type="submit" ng-click="signup()"
+                class="btn btn-lg btn-success btn-block"
+                ng-disabled="signUpForm.$invalid">
+              Sign up
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,40 @@
+<div id="wrapper">
+<!-- Page Content -->
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">SETTINGS</h1>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">General Account Settings</div>
+              <div class="panel-body">
+                <div class="input-group">
+
+                  <form name="userForm" novalidate class="css-form">
+                    <label>Expected number of calories</label>
+                    <div class="form-group"
+                      ng-class="{'has-error': userForm.expectedCalories.$invalid && !userForm.expectedCalories.$pristine}">
+                      <input type="number" class="form-control" name="expectedCalories"
+                        ng-model="user.expectedCalories" required/>
+                      <span class="help-block"
+                        ng-show="userForm.expectedCalories.$error.required">Required</span>
+                      <span class="help-block"
+                        ng-show="userForm.expectedCalories.$error.number">Enter a valid number.</span>
+                    </div>
+                    <div class="updateForm">
+                      <input type="submit" class="btn btn-default"
+                        ng-click="update()" value="Save" class="btn btn-default"
+                        ng-disabled="userForm.$invalid"/>
+                      <a class="btn btn-default" href="#/meals" role="button">Meals</a>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

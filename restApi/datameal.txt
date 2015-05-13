@@ -1,0 +1,6 @@
+{ "date" : "2015-04-28",
+  "time": "5:20",
+  "name" : "breakfast2",
+  "numCalories": 115,
+  "userId":"554361cbe8c79c7bc25cfcd3"
+}
