@@ -1,0 +1,23 @@
+Calories App
+
+Description
+
+This is a quick todo example app built with NodeJS and Angular stack
+
+How to run the app
+
+A few notes before the bullet list. The app uses gulp as the build system, mongo for the DB, NodeJS for the
+backend and Angular for the frontend
+
+So now, lets go to the Installation:
+
+1. Clone the project
+2. Install mongodb if you dont already have it (http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
+3. Start mongodb (mongod)
+4. Go to the restApi directory
+5. Install dependencies (npm install)
+6. Install gulp (npm install -g gulp)
+7 run the restApi (gulp)
+8. Go to the client directory
+9 Install dependencies (npm install&bower install)
+10. Run the client
